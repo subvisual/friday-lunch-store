@@ -1,0 +1,38 @@
+.root {
+  font-family: 'calluna-sans', helvetica, sans-serif;
+}
+
+.title {
+  color: #1D204A;
+  font-family: 'calluna', serif;
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 56px;
+}
+
+.description {
+  color: rgba(29, 32, 74, 0.75);
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.image {
+}
+
+.subtitle {
+  color: #1D204A;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 48px;
+}
+
+.price {
+  color: rgba(29, 32, 74, 0.75);
+  font-variant-numeric: lining-nums;
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.buttonPay {
+
+}
