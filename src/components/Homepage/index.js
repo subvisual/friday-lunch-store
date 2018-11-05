@@ -9,7 +9,10 @@ const UTRUST_API =
 
 class Homepage extends React.Component {
   handleClick = () => {
-    const url = fetch(UTRUST_API + '.netlify/functions/createOrder')
+    const url = fetch(UTRUST_API + '.netlify/functions/createOrder', {
+      method: 'POST',
+      body: JSON.stringify({ quantity: 1 }),
+    })
       .then(response => response.json())
       .then(response => {
         console.log('response:', response)

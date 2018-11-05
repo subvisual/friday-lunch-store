@@ -4857,14 +4857,16 @@ exports.handler = function (event, context, callback) {
       }
     }
   };
-  return utrustApi.authenticate().then(response => {
+  utrustApi.authenticate().then(response => {
     console.log('=== AUTHENTICATED ===', response);
     return utrustApi.createOrder(orderParams, response.data.attributes.token);
   }).then(response => {
     console.log('=== createOrder ===', response);
     callback(null, {
       statusCode: 200,
-      body: response.data.attributes.redirect_url
+      body: JSON.stringify({
+        url: response.data.attributes.redirect_url
+      })
     });
   }).catch(e => {
     callback(e);

@@ -80,7 +80,7 @@ exports.handler = function(event, context, callback) {
     },
   }
 
-  return utrustApi
+  utrustApi
     .authenticate()
     .then(response => {
       console.log('=== AUTHENTICATED ===', response)
@@ -92,7 +92,7 @@ exports.handler = function(event, context, callback) {
 
       callback(null, {
         statusCode: 200,
-        body: response.data.attributes.redirect_url,
+        body: JSON.stringify({ url: response.data.attributes.redirect_url }),
       })
     })
     .catch(e => {
