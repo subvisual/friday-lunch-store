@@ -4817,8 +4817,8 @@ const utrustApi = {
 };
 
 exports.handler = function (event, context, callback) {
-  const quantity = 2;
-  const total = '10.00';
+  const quantity = event.queryStringParameters.quantity;
+  const total = '5.00' * quantity;
   const orderParams = {
     data: {
       type: 'orders',

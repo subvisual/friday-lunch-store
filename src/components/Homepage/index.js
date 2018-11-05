@@ -26,9 +26,9 @@ class Homepage extends React.Component {
   }
 
   handlePay = () => {
-    callApi('.netlify/functions/createOrder', {
-      quantity: this.state.quantity,
-    })
+    const quantity = this.state.quantity
+
+    callApi('.netlify/functions/createOrder?quantity=' + quantity)
       .then(response => response.json())
       .then(response => {
         window.location.href = response.url
