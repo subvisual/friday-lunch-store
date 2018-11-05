@@ -4,10 +4,20 @@ import ImgDrink from './drink.png'
 
 import './index.css'
 
-class Homepage extends React.Component {
+const UTRUST_API =
+  process.env.NODE_ENV === 'development' ? 'http://localhost:9000/' : '/'
 
+class Homepage extends React.Component {
   handleClick = () => {
-    // call utrust api
+    const url = fetch(UTRUST_API + '.netlify/functions/createOrder')
+      .then(response => response.json())
+      .then(response => {
+        console.log('response:', response)
+
+        window.location.href = response.url
+        return response
+      })
+      .catch(error => console.log(error))
   }
 
   render() {

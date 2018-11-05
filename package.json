@@ -14,6 +14,7 @@
     "gatsby-transformer-sharp": "^2.1.4",
     "gh-pages": "^2.0.1",
     "json-api-normalizer": "^0.4.13",
+    "node-fetch": "^2.2.1",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
@@ -29,9 +30,11 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lambda": "netlify-lambda serve src/functions/ -c netlify-lambda-webpack.js"
   },
   "devDependencies": {
+    "@babel/plugin-transform-object-assign": "^7.0.0",
     "prettier": "^1.14.2"
   },
   "repository": {
