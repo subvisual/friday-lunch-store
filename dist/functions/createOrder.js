@@ -4817,6 +4817,8 @@ const utrustApi = {
 };
 
 exports.handler = function (event, context, callback) {
+  const quantity = 2;
+  const total = '10.00';
   const orderParams = {
     data: {
       type: 'orders',
@@ -4824,11 +4826,11 @@ exports.handler = function (event, context, callback) {
         order: {
           reference: 'order-1',
           amount: {
-            total: '4.90',
+            total,
             currency: 'EUR',
             details: {
-              subtotal: '4.00',
-              handling_fee: '0.90'
+              subtotal: total,
+              handling_fee: '0.00'
             }
           },
           return_urls: {
@@ -4837,10 +4839,10 @@ exports.handler = function (event, context, callback) {
           },
           line_items: [{
             sku: 'FWRY832876',
-            name: 'HODL Mug',
-            price: '4.00',
+            name: 'UDrink Cocktail',
+            price: '5.00',
             currency: 'EUR',
-            quantity: 1
+            quantity: quantity
           }]
         },
         customer: {

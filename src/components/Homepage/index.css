@@ -2,6 +2,14 @@
   font-family: 'calluna-sans', helvetica, sans-serif;
 }
 
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+}
+
 .title {
   color: #1D204A;
   font-family: 'calluna', serif;

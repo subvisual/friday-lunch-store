@@ -7,18 +7,31 @@ import './index.css'
 const UTRUST_API =
   process.env.NODE_ENV === 'development' ? 'http://localhost:9000/' : '/'
 
+const callApi = (endpoint, data) =>
+  fetch(UTRUST_API + endpoint, {
+    method: 'POST',
+    body: JSON.stringify(data),
+  })
+
 class Homepage extends React.Component {
-  handleClick = () => {
-    const url = fetch(UTRUST_API + '.netlify/functions/createOrder', {
-      method: 'POST',
-      body: JSON.stringify({ quantity: 1 }),
+  state = {
+    quantity: 1,
+  }
+
+  handleQuantity = num => {
+    const { quantity } = this.state
+
+    if (num == -1 && quantity == 1) return
+    this.setState({ quantity: quantity + num })
+  }
+
+  handlePay = () => {
+    callApi('.netlify/functions/createOrder', {
+      quantity: this.state.quantity,
     })
       .then(response => response.json())
       .then(response => {
-        console.log('response:', response)
-
         window.location.href = response.url
-        return response
       })
       .catch(error => console.log(error))
   }
@@ -30,15 +43,34 @@ class Homepage extends React.Component {
         <p className="description">
           Our team will guide you through the first steps of UTRUST payments...
         </p>
-        <div style={{ maxWidth: '100%', marginBottom: '1.45rem' }}>
-          <img className="image" src={ImgDrink} alt="UDrink" />
+        <div className="row">
+          <div className="column">
+            <div style={{ maxWidth: '100%', marginBottom: '1.45rem' }}>
+              <img className="image" src={ImgDrink} alt="UDrink" />
+            </div>
+          </div>
+          <div className="column">
+            <div className="subtitle">UDrink</div>
+            <p className="description">Gin & Tonic</p>
+            <p className="price">€ 5.00</p>
+            <p>Quantity: {this.state.quantity}</p>
+            <button
+              className="buttonLess"
+              onClick={() => this.handleQuantity(-1)}
+            >
+              -
+            </button>
+            <button
+              className="buttonMore"
+              onClick={() => this.handleQuantity(+1)}
+            >
+              +
+            </button>
+            <button className="buttonPay" onClick={this.handlePay}>
+              Pay with UTRUST
+            </button>
+          </div>
         </div>
-        <div className="subtitle">UDrink</div>
-        <p className="description">Gin & Tonic</p>
-        <p className="price">€ 5.00</p>
-        <button className="buttonPay" onClick={this.handleClick}>
-          Pay with UTRUST
-        </button>
       </div>
     )
   }
