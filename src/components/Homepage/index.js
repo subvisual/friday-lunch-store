@@ -1,6 +1,7 @@
 import React from 'react'
 
-import ImgDrink from './drink.png'
+import logo from './logo.png'
+import imgDrink from './drink.png'
 
 import './index.css'
 
@@ -39,14 +40,22 @@ class Homepage extends React.Component {
   render() {
     return (
       <div className="root">
-        <div className="title">Let’s get your drink!</div>
-        <p className="description">
-          Our team will guide you through the first steps of UTRUST payments...
-        </p>
+        <img className="logo" src={logo} alt="logo" />
         <div className="row">
           <div className="column">
-            <div style={{ maxWidth: '100%', marginBottom: '1.45rem' }}>
-              <img className="image" src={ImgDrink} alt="UDrink" />
+            <div className="title">Let’s get your drink!</div>
+            <p className="description">
+              Our team will guide you through the first steps of{' '}
+              <span className="smallCaps">UTRUST</span>
+              payments...
+            </p>
+          </div>
+          <div className="column" />
+        </div>
+        <div className="row">
+          <div className="column">
+            <div>
+              <img className="image" src={imgDrink} alt="UDrink" />
             </div>
           </div>
           <div className="column">
@@ -54,18 +63,20 @@ class Homepage extends React.Component {
             <p className="description">Gin & Tonic</p>
             <p className="price">€ 5.00</p>
             <p>Quantity: {this.state.quantity}</p>
-            <button
-              className="buttonLess"
-              onClick={() => this.handleQuantity(-1)}
-            >
-              -
-            </button>
-            <button
-              className="buttonMore"
-              onClick={() => this.handleQuantity(+1)}
-            >
-              +
-            </button>
+            <p>
+              <button
+                className="buttonLess"
+                onClick={() => this.handleQuantity(-1)}
+              >
+                -
+              </button>
+              <button
+                className="buttonMore"
+                onClick={() => this.handleQuantity(+1)}
+              >
+                +
+              </button>
+            </p>
             <button className="buttonPay" onClick={this.handlePay}>
               Pay with UTRUST
             </button>
