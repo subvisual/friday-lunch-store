@@ -13,8 +13,7 @@ class Enjoy extends React.Component {
           <div className="Enjoy-column">
             <div className="Enjoy-title">Enjoy your drink!</div>
             <p className="Enjoy-description">
-              Our team will guide you through the first steps of{' '}
-              <span className="smallCaps">UTRUST</span> payments...
+              Cheers to the future of online payments!
             </p>
           </div>
           <div className="Enjoy-column" />
