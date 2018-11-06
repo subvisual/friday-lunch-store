@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 
 import imgGatsby from './gatsby-cheers.gif'
 
@@ -25,7 +26,9 @@ class Enjoy extends React.Component {
         </div>
         <div className="Enjoy-row">
           <div className="Enjoy-column">
-            <button className="Enjoy-buttonPay">Buy more</button>
+            <Link to="/">
+              <button className="Enjoy-buttonPay">Buy more</button>
+            </Link>
           </div>
         </div>
       </div>
