@@ -55,8 +55,8 @@ exports.handler = function(event, context, callback) {
             },
           },
           return_urls: {
-            return_url: 'http://example.com/return',
-            cancel_url: 'http://example.com/cancel',
+            return_url: 'http://localhost:9000/enjoy',
+            cancel_url: null,
           },
           line_items: [
             {

@@ -5,6 +5,8 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Arcs from '../Arcs'
 
+import logo from './logo.png'
+
 import './index.css'
 
 const Layout = ({ children }) => (
@@ -32,7 +34,6 @@ const Layout = ({ children }) => (
         </Helmet>
         <div
           style={{
-            display: 'flex',
             alignItems: 'center',
             height: '100%',
             margin: '56px auto',
@@ -42,6 +43,7 @@ const Layout = ({ children }) => (
           }}
         >
           <Arcs />
+          <img className="logo" src={logo} alt="logo" />
           {children}
         </div>
       </>

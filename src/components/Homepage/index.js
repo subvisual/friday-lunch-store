@@ -1,6 +1,5 @@
 import React from 'react'
 
-import logo from './logo.png'
 import imgDrink from './drink.png'
 
 import './index.css'
@@ -14,7 +13,7 @@ const callApi = (endpoint, data) =>
     body: JSON.stringify(data),
   })
 
-class Homepage extends React.Component {
+class HomePage extends React.Component {
   state = {
     quantity: 1,
   }
@@ -39,46 +38,44 @@ class Homepage extends React.Component {
 
   render() {
     return (
-      <div className="Homepage-root">
-        <img className="Homepage-logo" src={logo} alt="logo" />
-        <div className="Homepage-row">
-          <div className="Homepage-column">
-            <div className="Homepage-title">Let’s get your drink!</div>
-            <p className="Homepage-description">
+      <div className="HomePage-root">
+        <div className="HomePage-row">
+          <div className="HomePage-column">
+            <div className="HomePage-title">Let’s get your drink!</div>
+            <p className="HomePage-description">
               Our team will guide you through the first steps of{' '}
-              <span className="Homepage-smallCaps">UTRUST</span>
-              payments...
+              <span className="smallCaps">UTRUST</span> payments...
             </p>
           </div>
-          <div className="Homepage-column" />
+          <div className="HomePage-column" />
         </div>
-        <div className="Homepage-row">
-          <div className="Homepage-column">
+        <div className="HomePage-row">
+          <div className="HomePage-column">
             <div>
-              <img className="Homepage-image" src={imgDrink} alt="UDrink" />
+              <img className="HomePage-image" src={imgDrink} alt="UDrink" />
             </div>
           </div>
-          <div className="Homepage-column">
-            <div className="Homepage-subtitle">UDrink</div>
-            <p className="Homepage-description">Gin & Tonic</p>
-            <p className="Homepage-price">€ 5.00</p>
+          <div className="HomePage-column">
+            <div className="HomePage-subtitle">UDrink</div>
+            <p className="HomePage-description">Gin & Tonic</p>
+            <p className="HomePage-price">€ 5.00</p>
             <p>Quantity: {this.state.quantity}</p>
             <p>
               <button
-                className="Homepage-buttonLess"
+                className="HomePage-buttonLess"
                 onClick={() => this.handleQuantity(-1)}
               >
                 -
               </button>
               <button
-                className="Homepage-buttonMore"
+                className="HomePage-buttonMore"
                 onClick={() => this.handleQuantity(+1)}
               >
                 +
               </button>
             </p>
-            <button className="Homepage-buttonPay" onClick={this.handlePay}>
-              Pay with UTRUST
+            <button className="HomePage-buttonPay" onClick={this.handlePay}>
+              Pay with <span className="smallCaps">UTRUST</span>
             </button>
           </div>
         </div>
@@ -87,4 +84,4 @@ class Homepage extends React.Component {
   }
 }
 
-export default Homepage
+export default HomePage
