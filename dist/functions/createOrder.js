@@ -4820,7 +4820,7 @@ exports.handler = function (event, context, callback) {
   const cancel_url = event.queryStringParameters.cancel_url;
   const return_url = event.queryStringParameters.return_url;
   const quantity = event.queryStringParameters.quantity;
-  const total = '5.00' * quantity;
+  const total = `${5 * quantity}.00`;
   const orderParams = {
     data: {
       type: 'orders',
