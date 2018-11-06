@@ -10,7 +10,13 @@ export default class Button extends Component {
     return this.props.href ? LINK : BUTTON
   }
 
+  renderLoading() {
+    return <button className="Button Button-isLoading" />
+  }
+
   renderButton() {
+    if (this.props.loading) return this.renderLoading()
+
     return (
       <button onClick={this.props.onClick} className="Button">
         {this.props.children}

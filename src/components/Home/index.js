@@ -19,6 +19,7 @@ const callApi = (endpoint, data) =>
 class Home extends React.Component {
   state = {
     quantity: 1,
+    loading: false,
   }
 
   handleQuantity = num => {
@@ -29,20 +30,22 @@ class Home extends React.Component {
   }
 
   handlePay = () => {
-    const host_url = this.props.location.href
-    const cancel_url = host_url
-    const return_url = host_url + 'enjoy'
+    this.setState({ loading: true }, () => {
+      const host_url = this.props.location.href
+      const cancel_url = host_url
+      const return_url = host_url + 'enjoy'
 
-    const quantity = this.state.quantity
+      const quantity = this.state.quantity
 
-    callApi(
-      `.netlify/functions/createOrder?quantity=${quantity}&cancel_url=${cancel_url}&return_url=${return_url}`
-    )
-      .then(response => response.json())
-      .then(response => {
-        window.location.href = response.url
-      })
-      .catch(error => console.log(error))
+      callApi(
+        `.netlify/functions/createOrder?quantity=${quantity}&cancel_url=${cancel_url}&return_url=${return_url}`
+      )
+        .then(response => response.json())
+        .then(response => {
+          window.location.href = response.url
+        })
+        .catch(error => console.log(error))
+    })
   }
 
   render() {
@@ -72,7 +75,7 @@ class Home extends React.Component {
               quantity={this.state.quantity}
               onHandleQuantity={this.handleQuantity}
             />
-            <Button onClick={this.handlePay}>
+            <Button loading={this.state.loading} onClick={this.handlePay}>
               Pay with <span className="smallCaps">UTRUST</span>
             </Button>
           </div>
