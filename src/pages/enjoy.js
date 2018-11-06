@@ -1,12 +1,12 @@
 import React from 'react'
 
 import Layout from '../components/Layout'
-import EnjoyPage from '../components/EnjoyPage'
+import Enjoy from '../components/Enjoy'
 
-const Enjoy = () => (
+const EnjoyPage = () => (
   <Layout>
-    <EnjoyPage />
+    <Enjoy />
   </Layout>
 )
 
-export default Enjoy
+export default EnjoyPage

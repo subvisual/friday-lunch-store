@@ -1,20 +1,20 @@
-.HomePage-root {
+.Home-root {
   font-family: 'calluna-sans', helvetica, sans-serif;
   font-variant-numeric: lining-nums;
 }
 
-.HomePage-row {
+.Home-row {
   display: flex;
   justify-content: space-between;
 }
 
-.HomePage-column {
+.Home-column {
   flex: 1;
   margin: 0 28px;
   min-width: 500px;
 }
 
-.HomePage-title {
+.Home-title {
   color: #1D204A;
   font-family: 'calluna', serif;
   font-size: 56px;
@@ -23,17 +23,17 @@
   margin-bottom: 36px;
 }
 
-.HomePage-description {
+.Home-description {
   color: rgba(29, 32, 74, 0.75);
   font-size: 20px;
   line-height: 28px;
 }
 
-.HomePage-image {
+.Home-image {
   margin-left: -18px;
 }
 
-.HomePage-subtitle {
+.Home-subtitle {
   color: #1D204A;
   font-size: 40px;
   font-weight: bold;
@@ -41,14 +41,14 @@
   margin-bottom: 28px;
 }
 
-.HomePage-price {
+.Home-price {
   color: rgba(29, 32, 74, 0.75);
   font-size: 28px;
   line-height: 28px;
   margin-bottom: 56px;
 }
 
-.HomePage-buttonPay {
+.Home-buttonPay {
   background: linear-gradient(180deg, #7A42FF 2.09%, #7D94FF 96.07%);
   box-shadow: 0px 8px 20px rgba(47, 52, 124, 0.2);
   border-radius: 4px;
@@ -58,6 +58,6 @@
   cursor: pointer;
 }
 
-.HomePage-smallCaps {
+.Home-smallCaps {
   font-variant: small-caps;
 }

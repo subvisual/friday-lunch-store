@@ -13,7 +13,7 @@ const callApi = (endpoint, data) =>
     body: JSON.stringify(data),
   })
 
-class HomePage extends React.Component {
+class Home extends React.Component {
   state = {
     quantity: 1,
   }
@@ -38,43 +38,43 @@ class HomePage extends React.Component {
 
   render() {
     return (
-      <div className="HomePage-root">
-        <div className="HomePage-row">
-          <div className="HomePage-column">
-            <div className="HomePage-title">Let’s get your drink!</div>
-            <p className="HomePage-description">
+      <div className="Home-root">
+        <div className="Home-row">
+          <div className="Home-column">
+            <div className="Home-title">Let’s get your drink!</div>
+            <p className="Home-description">
               Our team will guide you through the first steps of{' '}
               <span className="smallCaps">UTRUST</span> payments...
             </p>
           </div>
-          <div className="HomePage-column" />
+          <div className="Home-column" />
         </div>
-        <div className="HomePage-row">
-          <div className="HomePage-column">
+        <div className="Home-row">
+          <div className="Home-column">
             <div>
-              <img className="HomePage-image" src={imgDrink} alt="UDrink" />
+              <img className="Home-image" src={imgDrink} alt="UDrink" />
             </div>
           </div>
-          <div className="HomePage-column">
-            <div className="HomePage-subtitle">UDrink</div>
-            <p className="HomePage-description">Gin & Tonic</p>
-            <p className="HomePage-price">€ 5.00</p>
+          <div className="Home-column">
+            <div className="Home-subtitle">UDrink</div>
+            <p className="Home-description">Gin & Tonic</p>
+            <p className="Home-price">€ 5.00</p>
             <p>Quantity: {this.state.quantity}</p>
             <p>
               <button
-                className="HomePage-buttonLess"
+                className="Home-buttonLess"
                 onClick={() => this.handleQuantity(-1)}
               >
                 -
               </button>
               <button
-                className="HomePage-buttonMore"
+                className="Home-buttonMore"
                 onClick={() => this.handleQuantity(+1)}
               >
                 +
               </button>
             </p>
-            <button className="HomePage-buttonPay" onClick={this.handlePay}>
+            <button className="Home-buttonPay" onClick={this.handlePay}>
               Pay with <span className="smallCaps">UTRUST</span>
             </button>
           </div>
@@ -84,4 +84,4 @@ class HomePage extends React.Component {
   }
 }
 
-export default HomePage
+export default Home

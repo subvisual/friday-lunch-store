@@ -1,20 +1,20 @@
-.EnjoyPage-root {
+.Enjoy-root {
   font-family: 'calluna-sans', helvetica, sans-serif;
   font-variant-numeric: lining-nums;
 }
 
-.EnjoyPage-row {
+.Enjoy-row {
   display: flex;
   justify-content: space-between;
 }
 
-.EnjoyPage-column {
+.Enjoy-column {
   flex: 1;
   margin: 0 28px;
   min-width: 500px;
 }
 
-.EnjoyPage-title {
+.Enjoy-title {
   color: #1D204A;
   font-family: 'calluna', serif;
   font-size: 56px;
@@ -23,16 +23,16 @@
   margin-bottom: 36px;
 }
 
-.EnjoyPage-description {
+.Enjoy-description {
   color: rgba(29, 32, 74, 0.75);
   font-size: 20px;
   line-height: 28px;
 }
 
-.EnjoyPage-image {
+.Enjoy-image {
 }
 
-.EnjoyPage-buttonPay {
+.Enjoy-buttonPay {
   background: linear-gradient(180deg, #7A42FF 2.09%, #7D94FF 96.07%);
   box-shadow: 0px 8px 20px rgba(47, 52, 124, 0.2);
   border-radius: 4px;

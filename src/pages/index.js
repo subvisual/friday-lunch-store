@@ -1,11 +1,11 @@
 import React from 'react'
 
 import Layout from '../components/Layout'
-import HomePage from '../components/HomePage'
+import Home from '../components/Home'
 
 const IndexPage = () => (
   <Layout>
-    <HomePage />
+    <Home />
   </Layout>
 )
 
