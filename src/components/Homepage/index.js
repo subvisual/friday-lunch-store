@@ -22,7 +22,7 @@ class Homepage extends React.Component {
   handleQuantity = num => {
     const { quantity } = this.state
 
-    if (num == -1 && quantity == 1) return
+    if (num === -1 && quantity === 1) return
     this.setState({ quantity: quantity + num })
   }
 
@@ -39,45 +39,45 @@ class Homepage extends React.Component {
 
   render() {
     return (
-      <div className="root">
-        <img className="logo" src={logo} alt="logo" />
-        <div className="row">
-          <div className="column">
-            <div className="title">Let’s get your drink!</div>
-            <p className="description">
+      <div className="Homepage-root">
+        <img className="Homepage-logo" src={logo} alt="logo" />
+        <div className="Homepage-row">
+          <div className="Homepage-column">
+            <div className="Homepage-title">Let’s get your drink!</div>
+            <p className="Homepage-description">
               Our team will guide you through the first steps of{' '}
-              <span className="smallCaps">UTRUST</span>
+              <span className="Homepage-smallCaps">UTRUST</span>
               payments...
             </p>
           </div>
-          <div className="column" />
+          <div className="Homepage-column" />
         </div>
-        <div className="row">
-          <div className="column">
+        <div className="Homepage-row">
+          <div className="Homepage-column">
             <div>
-              <img className="image" src={imgDrink} alt="UDrink" />
+              <img className="Homepage-image" src={imgDrink} alt="UDrink" />
             </div>
           </div>
-          <div className="column">
-            <div className="subtitle">UDrink</div>
-            <p className="description">Gin & Tonic</p>
-            <p className="price">€ 5.00</p>
+          <div className="Homepage-column">
+            <div className="Homepage-subtitle">UDrink</div>
+            <p className="Homepage-description">Gin & Tonic</p>
+            <p className="Homepage-price">€ 5.00</p>
             <p>Quantity: {this.state.quantity}</p>
             <p>
               <button
-                className="buttonLess"
+                className="Homepage-buttonLess"
                 onClick={() => this.handleQuantity(-1)}
               >
                 -
               </button>
               <button
-                className="buttonMore"
+                className="Homepage-buttonMore"
                 onClick={() => this.handleQuantity(+1)}
               >
                 +
               </button>
             </p>
-            <button className="buttonPay" onClick={this.handlePay}>
+            <button className="Homepage-buttonPay" onClick={this.handlePay}>
               Pay with UTRUST
             </button>
           </div>

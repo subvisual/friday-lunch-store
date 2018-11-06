@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
+import Arcs from '../Arcs'
+
 import './index.css'
 
 const Layout = ({ children }) => (
@@ -30,12 +32,16 @@ const Layout = ({ children }) => (
         </Helmet>
         <div
           style={{
-            margin: '0 auto',
+            display: 'flex',
+            alignItems: 'center',
+            height: '100%',
+            margin: '56px auto',
             maxWidth: 960,
             padding: '0px 1.0875rem 1.45rem',
             paddingTop: 0,
           }}
         >
+          <Arcs />
           {children}
         </div>
       </>

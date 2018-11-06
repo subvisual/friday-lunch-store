@@ -1,24 +1,25 @@
-.root {
+.Homepage-root {
   font-family: 'calluna-sans', helvetica, sans-serif;
+  font-variant-numeric: lining-nums;
 }
 
-.row {
+.Homepage-row {
   display: flex;
   justify-content: space-between;
 }
 
-.column {
+.Homepage-column {
   flex: 1;
   margin: 0 28px;
   min-width: 500px;
 }
 
-.logo {
+.Homepage-logo {
   width: 167px;
   margin: 0 0 56px 28px;
 }
 
-.title {
+.Homepage-title {
   color: #1D204A;
   font-family: 'calluna', serif;
   font-size: 56px;
@@ -27,17 +28,17 @@
   margin-bottom: 36px;
 }
 
-.description {
+.Homepage-description {
   color: rgba(29, 32, 74, 0.75);
   font-size: 20px;
   line-height: 28px;
 }
 
-.image {
+.Homepage-image {
   margin-left: -18px;
 }
 
-.subtitle {
+.Homepage-subtitle {
   color: #1D204A;
   font-size: 40px;
   font-weight: bold;
@@ -45,16 +46,14 @@
   margin-bottom: 28px;
 }
 
-.price {
+.Homepage-price {
   color: rgba(29, 32, 74, 0.75);
-  font-variant-numeric: lining-nums;
   font-size: 28px;
   line-height: 28px;
   margin-bottom: 56px;
 }
 
-.buttonPay {
-
+.Homepage-buttonPay {
   background: linear-gradient(180deg, #7A42FF 2.09%, #7D94FF 96.07%);
   box-shadow: 0px 8px 20px rgba(47, 52, 124, 0.2);
   border-radius: 4px;
@@ -63,6 +62,6 @@
   padding: 14px 28px;
 }
 
-.smallCaps {
+.Homepage-smallCaps {
   font-variant: small-caps;
 }
