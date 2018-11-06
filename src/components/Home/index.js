@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Quantity from '../Quantity'
+
 import imgDrink from './drink.png'
 
 import './index.css'
@@ -59,21 +61,10 @@ class Home extends React.Component {
             <div className="Home-subtitle">UDrink</div>
             <p className="Home-description">Gin & Tonic</p>
             <p className="Home-price">€ 5.00</p>
-            <p>Quantity: {this.state.quantity}</p>
-            <p>
-              <button
-                className="Home-buttonLess"
-                onClick={() => this.handleQuantity(-1)}
-              >
-                -
-              </button>
-              <button
-                className="Home-buttonMore"
-                onClick={() => this.handleQuantity(+1)}
-              >
-                +
-              </button>
-            </p>
+            <Quantity
+              quantity={this.state.quantity}
+              onHandleQuantity={this.handleQuantity}
+            />
             <button className="Home-buttonPay" onClick={this.handlePay}>
               Pay with <span className="smallCaps">UTRUST</span>
             </button>
