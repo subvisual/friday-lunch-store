@@ -6,6 +6,10 @@ import imgDrink from './drink.png'
 
 import './index.css'
 
+const HOST_URL = window.location.href
+const CANCEL_URL = HOST_URL
+const RETURN_URL = HOST_URL + 'enjoy'
+
 const UTRUST_API =
   process.env.NODE_ENV === 'development' ? 'http://localhost:9000/' : '/'
 
@@ -30,7 +34,9 @@ class Home extends React.Component {
   handlePay = () => {
     const quantity = this.state.quantity
 
-    callApi('.netlify/functions/createOrder?quantity=' + quantity)
+    callApi(
+      `.netlify/functions/createOrder?quantity=${quantity}&cancel_url=${CANCEL_URL}&return_url=${RETURN_URL}`
+    )
       .then(response => response.json())
       .then(response => {
         window.location.href = response.url

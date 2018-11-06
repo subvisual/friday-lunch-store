@@ -4817,6 +4817,8 @@ const utrustApi = {
 };
 
 exports.handler = function (event, context, callback) {
+  const cancel_url = event.queryStringParameters.cancel_url;
+  const return_url = event.queryStringParameters.return_url;
   const quantity = event.queryStringParameters.quantity;
   const total = '5.00' * quantity;
   const orderParams = {
@@ -4834,8 +4836,8 @@ exports.handler = function (event, context, callback) {
             }
           },
           return_urls: {
-            return_url: 'http://localhost:9000/enjoy',
-            cancel_url: null
+            cancel_url: cancel_url,
+            return_url: return_url
           },
           line_items: [{
             sku: 'FWRY832876',
