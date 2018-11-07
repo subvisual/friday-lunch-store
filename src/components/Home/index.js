@@ -70,7 +70,7 @@ class Home extends React.Component {
           <div className="Home-column">
             <div className="Home-subtitle">UDrink</div>
             <p className="Home-description">Gin & Tonic</p>
-            <p className="Home-price">€ 5.00</p>
+            <p className="Home-price">€ 0.10</p>
             <Quantity
               quantity={this.state.quantity}
               onHandleQuantity={this.handleQuantity}

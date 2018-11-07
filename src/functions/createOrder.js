@@ -5,6 +5,7 @@ const API_ROOT = 'https://merchants.sandbox-utrust.com/api'
 // const API_ROOT = 'http://merchants.utrust.lvh.me:4000/api'
 const CLIENT_ID = 'c8d65cc2-0c82-429a-95ea-3f65011fc2cc'
 const CLIENT_SECRET = 'secret'
+const UDRINK_PRICE = '0.10'
 
 // utrust api
 const utrustApi = {
@@ -40,7 +41,7 @@ exports.handler = function(event, context, callback) {
   const cancel_url = event.queryStringParameters.cancel_url
   const return_url = event.queryStringParameters.return_url
   const quantity = event.queryStringParameters.quantity
-  const total = `${5 * quantity}.00`
+  const total = (UDRINK_PRICE * quantity).toFixed(2)
 
   const orderParams = {
     data: {
@@ -64,7 +65,7 @@ exports.handler = function(event, context, callback) {
             {
               sku: 'FWRY832876',
               name: 'UDrink Cocktail',
-              price: '5.00',
+              price: UDRINK_PRICE,
               currency: 'EUR',
               quantity: quantity,
             },
