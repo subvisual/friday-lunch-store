@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Button from '../Button'
-import Quantity from '../Quantity'
 
 import productImage from './tshirt.png'
 
@@ -58,11 +57,7 @@ class Home extends React.Component {
         <div className="Home-row">
           <div className="Home-column">
             <div>
-              <img
-                className="Home-image"
-                src={productImage}
-                alt="Product image"
-              />
+              <img className="Home-image" src={productImage} alt="Product" />
             </div>
           </div>
           <div className="Home-column">
