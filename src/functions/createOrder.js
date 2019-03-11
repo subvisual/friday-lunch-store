@@ -1,11 +1,10 @@
 import fetch from 'node-fetch'
 
 // config
-const API_ROOT = 'https://merchants.sandbox-utrust.com/api'
+const API_ROOT = 'https://merchants.pixels-utrust.com/api'
 // const API_ROOT = 'http://merchants.utrust.lvh.me:4000/api'
 const CLIENT_ID = 'c8d65cc2-0c82-429a-95ea-3f65011fc2cc'
 const CLIENT_SECRET = 'secret'
-const UDRINK_PRICE = '0.10'
 
 // utrust api
 const utrustApi = {
@@ -40,8 +39,10 @@ const utrustApi = {
 exports.handler = function(event, context, callback) {
   const cancel_url = event.queryStringParameters.cancel_url
   const return_url = event.queryStringParameters.return_url
+  const currency = event.queryStringParameters.currency
+  const price = event.queryStringParameters.price
   const quantity = event.queryStringParameters.quantity
-  const total = (UDRINK_PRICE * quantity).toFixed(2)
+  const total = (price * quantity).toFixed(2)
 
   const orderParams = {
     data: {
@@ -51,7 +52,7 @@ exports.handler = function(event, context, callback) {
           reference: 'order-1',
           amount: {
             total,
-            currency: 'EUR',
+            currency: currency,
             details: {
               subtotal: total,
               handling_fee: '0.00',
@@ -65,8 +66,8 @@ exports.handler = function(event, context, callback) {
             {
               sku: 'FWRY832876',
               name: 'UDrink Cocktail',
-              price: UDRINK_PRICE,
-              currency: 'EUR',
+              price: price,
+              currency: currency,
               quantity: quantity,
             },
           ],
