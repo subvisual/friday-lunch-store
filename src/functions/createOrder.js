@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 
 // config
-const API_ROOT = 'https://merchants.pixels-utrust.com/api'
+const API_ROOT = 'https://merchants.api.pixels-utrust.com/api'
 // const API_ROOT = 'http://merchants.utrust.lvh.me:4000/api'
 const CLIENT_ID = 'c8d65cc2-0c82-429a-95ea-3f65011fc2cc'
 const CLIENT_SECRET = 'secret'
@@ -65,7 +65,7 @@ exports.handler = function(event, context, callback) {
           line_items: [
             {
               sku: 'FWRY832876',
-              name: 'UDrink Cocktail',
+              name: 'PixelsCamp T-shirt',
               price: price,
               currency: currency,
               quantity: quantity,
@@ -99,7 +99,9 @@ exports.handler = function(event, context, callback) {
 
       callback(null, {
         statusCode: 200,
-        body: JSON.stringify({ url: response.data.attributes.redirect_url }),
+        body: JSON.stringify({
+          url: response.data.attributes.redirect_url + '&mode=terminal',
+        }),
       })
     })
     .catch(e => {
