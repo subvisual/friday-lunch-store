@@ -100,7 +100,7 @@ exports.handler = function(event, context, callback) {
       callback(null, {
         statusCode: 200,
         body: JSON.stringify({
-          url: response.data.attributes.redirect_url + '&mode=terminal',
+          url: response.data.attributes.redirect_url,
         }),
       })
     })
