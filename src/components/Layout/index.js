@@ -37,13 +37,15 @@ const Layout = ({ children }) => (
             alignItems: 'center',
             height: '100%',
             margin: '56px auto',
-            maxWidth: 960,
+            maxWidth: 1124,
             padding: '0px 1.0875rem 1.45rem',
             paddingTop: 0,
           }}
         >
           <Arcs />
-          <img className="logo" src={logo} alt="logo" />
+          <a href="/">
+            <img className="logo" src={logo} alt="logo" />
+          </a>
           {children}
         </div>
       </>

@@ -1,12 +1,40 @@
 import React from 'react'
+import { graphql, StaticQuery } from 'gatsby'
 
-import Layout from '../components/Layout'
 import Home from '../components/Home'
+import Layout from '../components/Layout'
 
-const IndexPage = ({ location }) => (
-  <Layout>
-    <Home location={location} />
-  </Layout>
+const IndexPage = ({ data, location }) => {
+  const { edges: products } = data.allMarkdownRemark
+
+  return (
+    <Layout>
+      <Home products={products} />
+    </Layout>
+  )
+}
+
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query IndexPageQuery {
+        allMarkdownRemark(
+          filter: { frontmatter: { templateKey: { eq: "product-page" } } }
+        ) {
+          edges {
+            node {
+              id
+              frontmatter {
+                path
+                name
+                image
+                price
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => <IndexPage data={data} />}
+  />
 )
-
-export default IndexPage

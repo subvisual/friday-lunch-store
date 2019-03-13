@@ -625,7 +625,7 @@ pre tt:after {
 
 .logo {
   width: 167px;
-  margin: 0 0 56px 28px;
+  margin: 0 0 56px 0;
 }
 
 .smallCaps {

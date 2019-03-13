@@ -1,0 +1,32 @@
+.Item {
+  flex: 324px;
+  margin-bottom: 124px;
+  margin-right: 20px;
+  max-width: 324px;
+
+  font-family: 'calluna-sans', helvetica, sans-serif;
+  font-variant-numeric: lining-nums;
+}
+
+.Item-image {
+  margin-bottom: 16px;
+
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(47, 52, 124, 0.2);
+  cursor: pointer;
+}
+
+.Item-name {
+  margin-bottom: 8px;
+
+  color: #1D204A;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.Item-price {
+color: #2F80ED;
+font-size: 24px;
+line-height: 28px;
+}

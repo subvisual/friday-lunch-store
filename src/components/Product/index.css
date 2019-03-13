@@ -1,0 +1,83 @@
+.Product-root {
+  font-family: 'calluna-sans', helvetica, sans-serif;
+  font-variant-numeric: lining-nums;
+}
+
+.Product-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Product-column {
+  flex: 1;
+  margin: 0 28px;
+  min-width: 500px;
+}
+
+.Product-backButton {
+  display: inline-flex;
+  margin-bottom: 56px;
+  padding-bottom: 8px;
+
+  color: #1D204A;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  border-bottom: 2px solid #1F254F;
+}
+
+.Product-backButtonIcon {
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.Product-title {
+  color: #1D204A;
+  font-family: 'calluna', serif;
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 56px;
+  margin-bottom: 36px;
+}
+
+.Product-description {
+  color: rgba(29, 32, 74, 0.75);
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.Product-image {
+  margin-left: -18px;
+
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(47, 52, 124, 0.2);
+}
+
+.Product-subtitle {
+  color: #1D204A;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 48px;
+  margin-bottom: 28px;
+}
+
+.Product-price {
+  color: rgba(29, 32, 74, 0.75);
+  font-size: 28px;
+  line-height: 28px;
+  margin-bottom: 56px;
+}
+
+.Product-buttonPay {
+  background: linear-gradient(180deg, #7A42FF 2.09%, #7D94FF 96.07%);
+  box-shadow: 0px 8px 20px rgba(47, 52, 124, 0.2);
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  padding: 14px 28px;
+  cursor: pointer;
+}
+
+.Product-smallCaps {
+  font-variant: small-caps;
+}

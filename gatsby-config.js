@@ -4,8 +4,17 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-transformer-sharp',
+    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages/`,
+        name: 'markdown-pages',
+      },
+    },
+    'gatsby-transformer-remark',
+    'gatsby-transformer-sharp',
   ],
   pathPrefix: '/mini-store',
 }

@@ -5,6 +5,9 @@ const API_ROOT = 'https://merchants.api.pixels-utrust.com/api'
 // const API_ROOT = 'http://merchants.utrust.lvh.me:4000/api'
 const CLIENT_ID = 'c8d65cc2-0c82-429a-95ea-3f65011fc2cc'
 const CLIENT_SECRET = 'secret'
+const RANDOM_ORDER_REFERENCE = Math.random()
+  .toString(36)
+  .substring(4)
 
 // utrust api
 const utrustApi = {
@@ -40,6 +43,7 @@ exports.handler = function(event, context, callback) {
   const cancel_url = event.queryStringParameters.cancel_url
   const return_url = event.queryStringParameters.return_url
   const currency = event.queryStringParameters.currency
+  const name = event.queryStringParameters.name
   const price = event.queryStringParameters.price
   const quantity = event.queryStringParameters.quantity
   const total = (price * quantity).toFixed(2)
@@ -49,7 +53,7 @@ exports.handler = function(event, context, callback) {
       type: 'orders',
       attributes: {
         order: {
-          reference: 'order-1',
+          reference: RANDOM_ORDER_REFERENCE,
           amount: {
             total,
             currency: currency,
@@ -65,7 +69,7 @@ exports.handler = function(event, context, callback) {
           line_items: [
             {
               sku: 'FWRY832876',
-              name: 'PixelsCamp T-shirt',
+              name: name,
               price: price,
               currency: currency,
               quantity: quantity,

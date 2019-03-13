@@ -1,63 +1,8 @@
-.Home-root {
-  font-family: 'calluna-sans', helvetica, sans-serif;
-  font-variant-numeric: lining-nums;
-}
-
-.Home-row {
+.Grid {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 1148px;
   justify-content: space-between;
-}
 
-.Home-column {
-  flex: 1;
-  margin: 0 28px;
-  min-width: 500px;
-}
-
-.Home-title {
-  color: #1D204A;
-  font-family: 'calluna', serif;
-  font-size: 56px;
-  font-weight: bold;
-  line-height: 56px;
-  margin-bottom: 36px;
-}
-
-.Home-description {
-  color: rgba(29, 32, 74, 0.75);
-  font-size: 20px;
-  line-height: 28px;
-}
-
-.Home-image {
-  margin-left: -18px;
-}
-
-.Home-subtitle {
-  color: #1D204A;
-  font-size: 40px;
-  font-weight: bold;
-  line-height: 48px;
-  margin-bottom: 28px;
-}
-
-.Home-price {
-  color: rgba(29, 32, 74, 0.75);
-  font-size: 28px;
-  line-height: 28px;
   margin-bottom: 56px;
-}
-
-.Home-buttonPay {
-  background: linear-gradient(180deg, #7A42FF 2.09%, #7D94FF 96.07%);
-  box-shadow: 0px 8px 20px rgba(47, 52, 124, 0.2);
-  border-radius: 4px;
-  color: white;
-  font-weight: bold;
-  padding: 14px 28px;
-  cursor: pointer;
-}
-
-.Home-smallCaps {
-  font-variant: small-caps;
 }
