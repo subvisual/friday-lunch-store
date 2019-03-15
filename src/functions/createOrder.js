@@ -5,10 +5,6 @@ const API_ROOT = 'https://merchants.api.pixels-utrust.com/api'
 // const API_ROOT = 'http://merchants.utrust.lvh.me:4000/api'
 const CLIENT_ID = 'c8d65cc2-0c82-429a-95ea-3f65011fc2cc'
 const CLIENT_SECRET = 'secret'
-const RANDOM_ORDER_REFERENCE = Math.random()
-  .toString(36)
-  .substring(4)
-  .toUpperCase()
 
 // utrust api
 const utrustApi = {
@@ -49,12 +45,17 @@ exports.handler = function(event, context, callback) {
   const quantity = event.queryStringParameters.quantity
   const total = (price * quantity).toFixed(2)
 
+  const randomOrderReference = Math.random()
+    .toString(36)
+    .substring(4)
+    .toUpperCase()
+
   const orderParams = {
     data: {
       type: 'orders',
       attributes: {
         order: {
-          reference: RANDOM_ORDER_REFERENCE,
+          reference: randomOrderReference,
           amount: {
             total,
             currency: currency,
