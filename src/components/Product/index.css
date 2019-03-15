@@ -5,12 +5,13 @@
 
 .Product-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .Product-column {
   flex: 1;
-  margin: 0 28px;
+  margin: 0 14px;
   min-width: 500px;
 }
 
@@ -54,11 +55,13 @@
 }
 
 .Product-subtitle {
+  margin-bottom: 28px;
+  margin-top: 56px;
+
   color: #1D204A;
   font-size: 40px;
   font-weight: bold;
   line-height: 48px;
-  margin-bottom: 28px;
 }
 
 .Product-price {
