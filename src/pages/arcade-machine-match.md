@@ -1,4 +1,5 @@
 ---
+position: 1
 path: '/arcade-machine-match'
 templateKey: product-page
 name: Arcade machine match

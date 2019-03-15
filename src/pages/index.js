@@ -20,6 +20,7 @@ export default () => (
       query IndexPageQuery {
         allMarkdownRemark(
           filter: { frontmatter: { templateKey: { eq: "product-page" } } }
+          sort: { fields: [frontmatter___position], order: ASC }
         ) {
           edges {
             node {

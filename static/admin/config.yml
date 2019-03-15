@@ -12,6 +12,11 @@ collections:
     create: true
     identifier_field: name
     fields:
+      - {
+          name: 'position',
+          label: 'Position',
+          hint: 'This number be used to sort the items',
+        }
       - { name: 'templateKey', label: 'Template Key', default: 'product-page' }
       - { name: path, label: Path, hint: 'E.g.: /chess-match' }
       - { name: name, label: Name }

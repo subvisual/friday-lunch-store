@@ -1,4 +1,5 @@
 ---
+position: 2
 templateKey: product-page
 path: /mug-xmas
 name: Mug XMAS

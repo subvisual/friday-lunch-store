@@ -1,4 +1,5 @@
 ---
+position: 3
 path: /chess-match
 templateKey: product-page
 name: Chess Match
