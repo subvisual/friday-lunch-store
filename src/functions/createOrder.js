@@ -8,6 +8,7 @@ const CLIENT_SECRET = 'secret'
 const RANDOM_ORDER_REFERENCE = Math.random()
   .toString(36)
   .substring(4)
+  .toUpperCase()
 
 // utrust api
 const utrustApi = {
