@@ -4,7 +4,7 @@ templateKey: product-page
 path: /mug-xmas
 name: Mug XMAS
 description: Get the UTRUST Mug XMAS edition
-image: /assets/christmas-mug.png
+image: /assets/mug.jpg
 price: '1.99'
 ---
 
