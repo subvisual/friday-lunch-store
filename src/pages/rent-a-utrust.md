@@ -2,9 +2,9 @@
 position: '10'
 templateKey: product-page
 path: rent-utruster
-name: Rent a UTRUST
+name: Rent a UTRUSTer
 description: 'Do you need a hand? We have master brain ready to help you '
-image: /assets/utrust_team.jpg
+image: /assets/team.jpg
 price: '10'
 ---
 
