@@ -16,7 +16,7 @@ class Item extends React.Component {
 
     return (
       <div className="Item" onClick={this.handleClick}>
-        <img className="Item-image" src={image} />
+        <img className="Item-image" alt={name} src={image} />
         <div className="Item-name">{name}</div>
         <div className="Item-price">{`€ ${price}`}</div>
       </div>

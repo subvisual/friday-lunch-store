@@ -51,7 +51,11 @@ class Product extends React.Component {
       <div className="Product-root">
         <div className="Product-row">
           <a href="/" className="Product-backButton">
-            <img className="Product-backButtonIcon" src={leftArrow} />
+            <img
+              className="Product-backButtonIcon"
+              alt="Back Arrow"
+              src={leftArrow}
+            />
             Back
           </a>
         </div>
