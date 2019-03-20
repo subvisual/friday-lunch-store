@@ -1,5 +1,5 @@
 ---
-position: '9'
+position: 09
 templateKey: product-page
 path: /healthy-food
 name: Healthy Food
