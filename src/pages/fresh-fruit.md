@@ -1,5 +1,5 @@
 ---
-position: '8'
+position: 08
 templateKey: product-page
 path: /fresh-fruit
 name: Fresh Fruit
