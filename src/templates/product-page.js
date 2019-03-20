@@ -1,23 +1,28 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { isNil } from 'lodash'
 
 import Layout from '../components/Layout'
 import Product from '../components/Product'
 
 const ProductPage = ({ data, location }) => {
-  const { frontmatter } = data.markdownRemark
+  if (isNil(data) || isNil(data.markdownRemark)) {
+    return null
+  } else {
+    const { frontmatter } = data.markdownRemark
 
-  return (
-    <Layout>
-      <Product
-        location={location}
-        name={frontmatter.name}
-        description={frontmatter.description}
-        image={frontmatter.image}
-        price={frontmatter.price}
-      />
-    </Layout>
-  )
+    return (
+      <Layout>
+        <Product
+          location={location}
+          name={frontmatter.name}
+          description={frontmatter.description}
+          image={frontmatter.image}
+          price={frontmatter.price}
+        />
+      </Layout>
+    )
+  }
 }
 
 export default ProductPage
