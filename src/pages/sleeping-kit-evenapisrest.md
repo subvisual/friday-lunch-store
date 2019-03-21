@@ -1,5 +1,5 @@
 ---
-position: '15'
+position: '12'
 templateKey: product-page
 path: sleeping-kit
 name: 'Sleeping Kit #EVENAPISREST'
