@@ -5,6 +5,6 @@ path: /chess-match
 name: Chess Match
 description: Play an Chess match and win UTK
 image: /assets/chess.jpg
-price: '1'
+price: '2.99'
 ---
 
