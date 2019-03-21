@@ -5,6 +5,6 @@ path: /utrust-mug
 name: UTRUST Mug
 description: Official UTRUST mug
 image: /assets/mug.jpg
-price: '1.99'
+price: '3'
 ---
 
