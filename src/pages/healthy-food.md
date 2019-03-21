@@ -5,6 +5,6 @@ path: /healthy-food
 name: Healthy Food
 description: Delicious healthy food for your brain
 image: /assets/papaia.jpg
-price: '8'
+price: '10'
 ---
 
