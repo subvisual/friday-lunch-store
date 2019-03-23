@@ -5,6 +5,6 @@ path: t-shirt
 name: T-Shirt
 description: Swag up
 image: /assets/newshirt-utrust-t-shirt_hodl_blue.png
-price: '8'
+price: '8.00'
 ---
 
