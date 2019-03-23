@@ -1,5 +1,5 @@
 ---
-position: '14'
+position: '20'
 templateKey: product-page
 path: /hoodie
 name: Hoodie
