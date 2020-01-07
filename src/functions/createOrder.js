@@ -1,36 +1,17 @@
 import fetch from 'node-fetch'
 
 // config
-const API_ROOT = 'https://merchants.api.pixels-utrust.com/api'
-// const API_ROOT = 'http://merchants.utrust.lvh.me:4000/api'
-const CLIENT_ID = 'c8d65cc2-0c82-429a-95ea-3f65011fc2cc'
-const CLIENT_SECRET = 'secret'
+const API_ROOT = 'https://merchants.api.sandbox-utrust.com/api'
+const API_KEY = 'u_test_api_f0d624b9-4c33-43bb-8737-d600222c6eb4'
 
 // utrust api
 const utrustApi = {
-  authenticate: () =>
-    fetch(API_ROOT + '/stores/session', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/vnd.api+json',
-      },
-      body: JSON.stringify({
-        data: {
-          type: 'session',
-          attributes: {
-            client_id: CLIENT_ID,
-            client_secret: CLIENT_SECRET,
-          },
-        },
-      }),
-    }).then(response => response.json()),
-
   createOrder: (params, token) =>
     fetch(API_ROOT + '/stores/orders/', {
       method: 'POST',
       headers: {
         'content-type': 'application/vnd.api+json',
-        authorization: 'Bearer ' + token,
+        authorization: 'Bearer ' + API_KEY,
       },
       body: JSON.stringify(params),
     }).then(response => response.json()),
@@ -59,10 +40,7 @@ exports.handler = function(event, context, callback) {
           amount: {
             total,
             currency: currency,
-            details: {
-              subtotal: total,
-              handling_fee: '0.00',
-            },
+            details: {},
           },
           return_urls: {
             cancel_url: cancel_url,
@@ -79,19 +57,14 @@ exports.handler = function(event, context, callback) {
           ],
         },
         customer: {
-          email: 'buyer@example.com',
+          email: 'buyer-from-mini-store@example.com',
         },
       },
     },
   }
 
   utrustApi
-    .authenticate()
-    .then(response => {
-      console.log('=== AUTHENTICATED ===', response)
-
-      return utrustApi.createOrder(orderParams, response.data.attributes.token)
-    })
+    .createOrder(orderParams)
     .then(response => {
       console.log('=== createOrder ===', response)
 
