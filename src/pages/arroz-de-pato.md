@@ -5,6 +5,6 @@ path: /duck-rice
 name: Arroz de Pato
 description: Pato. Arroz. Bom
 image: /assets/arroz-de-pato-516x310.jpg
-price: '1.5'
+price: '1,00'
 ---
 
