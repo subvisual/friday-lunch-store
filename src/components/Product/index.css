@@ -71,6 +71,12 @@
   margin-bottom: 56px;
 }
 
+.Product-email {
+  display: block;
+  margin-bottom: 28px;
+  color: rgba(29, 32, 74, 0.75);
+}
+
 .Product-buttonPay {
   background: linear-gradient(180deg, #7A42FF 2.09%, #7D94FF 96.07%);
   box-shadow: 0px 8px 20px rgba(47, 52, 124, 0.2);

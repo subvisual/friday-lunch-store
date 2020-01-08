@@ -24,17 +24,18 @@ class Product extends React.Component {
   }
 
   handlePay = () => {
+    if (this.state.email === '' || this.state.email === undefined) {
+      alert('Please input your email address')
+      return
+    }
+
     this.setState({ loading: true }, () => {
       const host_url = this.props.location.href
       const cancel_url = host_url
       const return_url = host_url
 
       callApi(
-        `.netlify/functions/createOrder?&currency=${CURRENCY}&quantity=${QUANTITY}&name=${
-          this.props.name
-        }&price=${
-          this.props.price
-        }&cancel_url=${cancel_url}&return_url=${return_url}`
+        `.netlify/functions/createOrder?&currency=${CURRENCY}&quantity=${QUANTITY}&email=${this.props.email}&name=${this.props.name}&price=${this.props.price}&cancel_url=${cancel_url}&return_url=${return_url}`
       )
         .then(response => response.json())
         .then(response => {
@@ -42,6 +43,10 @@ class Product extends React.Component {
         })
         .catch(error => console.log(error))
     })
+  }
+
+  handleEmailChange = event => {
+    this.setState({ email: event.target.value })
   }
 
   render() {
@@ -69,6 +74,13 @@ class Product extends React.Component {
             <div className="Product-subtitle">{name}</div>
             <p className="Product-description">{description}</p>
             <p className="Product-price">{`€ ${price}`}</p>
+            <input
+              className="Product-email"
+              type="text"
+              name="email"
+              placeholder="your email"
+              onChange={this.handleEmailChange}
+            />
             <Button loading={this.state.loading} onClick={this.handlePay}>
               Pay with <span className="smallCaps">UTRUST</span>
             </Button>

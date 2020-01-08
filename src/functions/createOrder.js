@@ -23,6 +23,7 @@ exports.handler = function(event, context, callback) {
   const currency = event.queryStringParameters.currency
   const name = event.queryStringParameters.name
   const price = event.queryStringParameters.price
+  const email = event.queryStringParameters.email
   const quantity = event.queryStringParameters.quantity
   const total = (price * quantity).toFixed(2)
 
@@ -57,7 +58,7 @@ exports.handler = function(event, context, callback) {
           ],
         },
         customer: {
-          email: 'buyer-from-mini-store@example.com',
+          email: email,
         },
       },
     },
