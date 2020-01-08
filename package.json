@@ -17,6 +17,7 @@
     "gh-pages": "^2.0.1",
     "json-api-normalizer": "^0.4.13",
     "netlify-cms-app": "^2.10.1",
+    "netlify-lambda": "^1.6.3",
     "node-fetch": "^2.2.1",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
