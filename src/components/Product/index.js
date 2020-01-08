@@ -21,6 +21,7 @@ const callApi = (endpoint, data) =>
 class Product extends React.Component {
   state = {
     loading: false,
+    email: '',
   }
 
   handlePay = () => {
@@ -35,7 +36,7 @@ class Product extends React.Component {
       const return_url = host_url
 
       callApi(
-        `.netlify/functions/createOrder?&currency=${CURRENCY}&quantity=${QUANTITY}&email=${this.props.email}&name=${this.props.name}&price=${this.props.price}&cancel_url=${cancel_url}&return_url=${return_url}`
+        `.netlify/functions/createOrder?&currency=${CURRENCY}&quantity=${QUANTITY}&email=${this.state.email}&name=${this.props.name}&price=${this.props.price}&cancel_url=${cancel_url}&return_url=${return_url}`
       )
         .then(response => response.json())
         .then(response => {
