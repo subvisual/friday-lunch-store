@@ -1,10 +1,10 @@
 ---
-position: '7'
+position: 6
 templateKey: product-page
 path: /robalo-brasa
 name: Robalo na Brasa
 description: Robalo na Brasa
 image: /assets/robalo.jpg
-price: '1.00'
+price: 1.00
 ---
 
