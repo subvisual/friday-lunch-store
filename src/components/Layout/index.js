@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Arcs from '../Arcs'
-
 import logo from './logo.png'
 
 import './index.css'
@@ -42,7 +40,6 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
-          <Arcs />
           <a href="/">
             <img className="logo" src={logo} alt="logo" />
           </a>
