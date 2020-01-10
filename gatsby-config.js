@@ -3,6 +3,7 @@ module.exports = {
     title: 'UTRUST Mini store',
   },
   plugins: [
+    'gatsby-source-utrust',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-offline',
