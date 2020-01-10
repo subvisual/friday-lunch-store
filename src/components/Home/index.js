@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import Item from './Item'
 
@@ -9,21 +10,30 @@ class Home extends React.Component {
     const { products } = this.props
 
     return (
-      <div className="Grid">
-        {products.map(item => {
-          const { id, frontmatter } = item.node
+      <>
+        <Link
+          to="/orders"
+          style={{ marginBottom: '54px', display: 'inline-block' }}
+        >
+          This week's orders
+        </Link>
 
-          return (
-            <Item
-              key={id}
-              path={frontmatter.path}
-              name={frontmatter.name}
-              image={frontmatter.image}
-              price={frontmatter.price}
-            />
-          )
-        })}
-      </div>
+        <div className="Grid">
+          {products.map(item => {
+            const { id, frontmatter } = item.node
+
+            return (
+              <Item
+                key={id}
+                path={frontmatter.path}
+                name={frontmatter.name}
+                image={frontmatter.image}
+                price={frontmatter.price}
+              />
+            )
+          })}
+        </div>
+      </>
     )
   }
 }

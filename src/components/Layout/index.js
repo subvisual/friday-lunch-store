@@ -40,7 +40,7 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
-          <a href="/">
+          <a style={{ display: 'block' }} href="/">
             <img className="logo" src={logo} alt="logo" />
           </a>
           {children}
