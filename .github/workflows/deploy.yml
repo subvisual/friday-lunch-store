@@ -1,0 +1,13 @@
+name: Deploy
+
+on:
+  schedule:
+    - cron: '0 6,8,10,11,12,13,14,15,16,17,18,19 * * 1-5'
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/5e18bc311443eed0375d644d
