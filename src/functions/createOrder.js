@@ -2,20 +2,6 @@ import fetch from 'node-fetch'
 
 // config
 const API_ROOT = 'https://merchants.api.sandbox-utrust.com/api'
-const API_KEY = 'u_test_api_f0d624b9-4c33-43bb-8737-d600222c6eb4'
-
-// utrust api
-const utrustApi = {
-  createOrder: (params, token) =>
-    fetch(API_ROOT + '/stores/orders/', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/vnd.api+json',
-        authorization: 'Bearer ' + API_KEY,
-      },
-      body: JSON.stringify(params),
-    }).then(response => response.json()),
-}
 
 exports.handler = function(event, context, callback) {
   const cancel_url = event.queryStringParameters.cancel_url
@@ -64,11 +50,17 @@ exports.handler = function(event, context, callback) {
     },
   }
 
-  utrustApi
-    .createOrder(orderParams)
+  fetch(API_ROOT + '/stores/orders/', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/vnd.api+json',
+      authorization: 'Bearer ' + process.env.TOKEN,
+    },
+    body: JSON.stringify(orderParams),
+  })
+    .then(response => response.json())
     .then(response => {
       console.log('=== createOrder ===', response)
-
       callback(null, {
         statusCode: 200,
         body: JSON.stringify({
