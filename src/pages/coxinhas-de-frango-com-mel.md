@@ -5,6 +5,6 @@ path: /Carne-a-portuguesa
 name: Carne à portuguesa
 description: Carne à portuguesa
 image: /assets/carne-portuguesa.jpg
-price: 1
+price: '1'
 ---
 

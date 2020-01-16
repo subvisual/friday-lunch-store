@@ -5,6 +5,6 @@ path: /robalo-brasa
 name: Robalo na Brasa
 description: Robalo na Brasa
 image: /assets/robalo.jpg
-price: 1.00
+price: '1.00'
 ---
 

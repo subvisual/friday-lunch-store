@@ -20,7 +20,7 @@ export default () => (
       query IndexPageQuery {
         allMarkdownRemark(
           filter: { frontmatter: { templateKey: { eq: "product-page" } } }
-          sort: { fields: [frontmatter___position], order: ASC }
+          sort: { fields: [frontmatter___name], order: ASC }
         ) {
           edges {
             node {
@@ -29,7 +29,6 @@ export default () => (
                 path
                 name
                 image
-                price
               }
             }
           }
