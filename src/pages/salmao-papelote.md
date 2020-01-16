@@ -1,10 +1,10 @@
 ---
 position: 9
 templateKey: product-page
-path: /salmao-papelote
-name: Salmão em papelote
-description: Salmão em papelote
-image: /assets/salmao.jpg
-price: 1.00
+path: /Perna-de-porco-com-castanhas
+name: Perna de porco com castanhas
+description: Perna de porco com castanhas
+image: /assets/perna-porco.jpg
+price: 1
 ---
 
