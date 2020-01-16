@@ -27,7 +27,7 @@ export default ({ data }) => {
       <h1>This week's orders</h1>
       <p>Total: {orders.length}</p>
       {Object.keys(orderGroups).map(key => (
-        <>
+        <div key={key}>
           <p>
             <b>
               {key} ({orderGroups[key].length})
@@ -40,7 +40,7 @@ export default ({ data }) => {
               </li>
             ))}
           </ul>
-        </>
+        </div>
       ))}
     </Layout>
   )
@@ -52,6 +52,7 @@ export const query = graphql`
       nodes {
         id
         status
+        created_at
         items {
           name
           quantity
