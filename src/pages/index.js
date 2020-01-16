@@ -29,6 +29,7 @@ export default () => (
                 path
                 name
                 image
+                price
               }
             }
           }
