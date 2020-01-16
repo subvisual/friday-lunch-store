@@ -1,7 +1,7 @@
 ---
 position: 11
 templateKey: product-page
-path: '/Bacalhau-a-bras '
+path: '/Bacalhau-a-bras'
 name: 'Bacalhau à Brás '
 description: 'Bacalhau à Brás '
 image: /assets/bacalhau-a-bras-575x383.jpg
