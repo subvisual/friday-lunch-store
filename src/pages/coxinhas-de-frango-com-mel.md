@@ -1,10 +1,10 @@
 ---
 position: 4
 templateKey: product-page
-path: /coxinha-mel
-name: Coxinhas de frango com mel
-description: Coxinhas de frango com mel
-image: /assets/coxinhas.jpg
-price: 1.00
+path: /Carne-a-portuguesa
+name: Carne à portuguesa
+description: Carne à portuguesa
+image: /assets/carne-portuguesa.jpg
+price: 1
 ---
 
