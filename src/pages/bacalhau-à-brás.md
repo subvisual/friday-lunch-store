@@ -1,5 +1,5 @@
 ---
-position: '11'
+position: '1'
 templateKey: product-page
 path: '/Bacalhau-a-bras '
 name: 'Bacalhau à Brás '
