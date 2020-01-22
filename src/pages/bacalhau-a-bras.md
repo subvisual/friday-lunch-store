@@ -1,10 +1,10 @@
 ---
 position: 11
 templateKey: product-page
-path: '/Bacalhau-a-bras'
+path: /Bacalhau-a-bras
 name: 'Bacalhau à Brás '
-description: 'Bacalhau à Brás '
-image: /assets/bacalhau-a-bras-575x383.jpg
+description: Bacalhau fresco com migas de broa
+image: /assets/bacalhau-com-migas-de-broa-e-espinafres.jpg
 price: '1'
 ---
 
