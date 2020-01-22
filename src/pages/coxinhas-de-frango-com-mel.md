@@ -1,10 +1,10 @@
 ---
 position: 4
 templateKey: product-page
-path: /Carne-a-portuguesa
-name: Carne à portuguesa
-description: Carne à portuguesa
-image: /assets/carne-portuguesa.jpg
+path: /Chuletão-de-boi
+name: Chuletão de boi
+description: Chuletão de boi
+image: /assets/images-1-.jpeg
 price: '1'
 ---
 
