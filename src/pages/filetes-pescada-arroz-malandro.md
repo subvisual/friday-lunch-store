@@ -1,10 +1,10 @@
 ---
 position: 8
 templateKey: product-page
-path: /filetes-pescada-arroz-malandro
-name: Filetes de pescada com arroz de feijão malandro
-description: Filetes de pescada com arroz de feijão malandro
-image: /assets/filetes.jpg
+path: /filetes-pescada-salada-russa
+name: Filetes de pescada com salada russa
+description: Filetes de pescada com salada russa
+image: /assets/filetes.jpeg
 price: '1.00'
 ---
 
