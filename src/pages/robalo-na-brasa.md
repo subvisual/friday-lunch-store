@@ -1,9 +1,9 @@
 ---
 position: 6
 templateKey: product-page
-path: /dourada-brasa
-name: Dourada na Brasa
-description: Dourada na Brasa
+path: /robalo-brasa
+name: Robalo na Brasa
+description: Robalo na Brasa
 image: /assets/robalo.jpg
 price: '1.00'
 ---
