@@ -1,10 +1,10 @@
 ---
 position: 10
 templateKey: product-page
-path: /Tomate-recheado-ovo-escalfado
-name: "\U0001F966 Tomate recheado com ovo escalfado"
-description: "\U0001F966 Tomate recheado com ovo escalfado"
-image: /assets/trap.jpeg
+path: /Feijoada-de-tofu
+name: Feijoada de tofu
+description: Feijoada de tofu
+image: /assets/blogger-image-364172926.jpg
 price: '0.1'
 ---
 
