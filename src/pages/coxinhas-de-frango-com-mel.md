@@ -1,10 +1,10 @@
 ---
 position: 4
 templateKey: product-page
-path: /Miminhos-de-frango-grelhados
-name: Miminhos de frango grelhados
-description: Miminhos de frango grelhados
-image: /assets/transferir-2-.jpeg
+path: /Secretos-de-porco-preto
+name: Secretos de porco preto
+description: Secretos de porco preto
+image: /assets/download.jpeg
 price: '1'
 ---
 
