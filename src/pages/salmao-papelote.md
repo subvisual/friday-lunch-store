@@ -1,10 +1,10 @@
 ---
 position: 9
 templateKey: product-page
-path: /Perna-de-porco-com-castanhas
-name: Perna de porco com castanhas
-description: Perna de porco com castanhas
-image: /assets/perna-porco.jpg
+path: /Perna-de-peru-assada-no-forno
+name: Perna de peru assada no forno
+description: Perna de peru assada no forno
+image: /assets/dsc01078.jpg
 price: '1'
 ---
 
