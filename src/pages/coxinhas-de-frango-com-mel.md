@@ -1,10 +1,10 @@
 ---
 position: 4
 templateKey: product-page
-path: /Secretos-de-porco-preto
-name: Secretos de porco preto
-description: Secretos de porco preto
-image: /assets/download.jpeg
+path: /arroz-panados
+name: Arroz de forno com panados do lombo
+description: Arroz de forno com panados do lombo
+image: /assets/download-2-.jpeg
 price: '1'
 ---
 
