@@ -1,10 +1,10 @@
 ---
 position: 4
 templateKey: product-page
-path: /arroz-panados
-name: Arroz de forno com panados do lombo
-description: Arroz de forno com panados do lombo
-image: /assets/download-2-.jpeg
+path: /rojoes
+name: Rojões à moda EatFit
+description: 'com frango, batata e pickles'
+image: /assets/4-rojoes.jpeg
 price: '1'
 ---
 
