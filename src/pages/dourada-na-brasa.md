@@ -1,10 +1,10 @@
 ---
 position: 8
 templateKey: product-page
-path: /dourada-brasa
-name: Dourada na Brasa
-description: Dourada na Brasa
-image: /assets/dscn13231.jpg
+path: /Rancho-vegetariano
+name: Rancho vegetariano
+description: 'com enchidos de soja, couve e penne integral'
+image: /assets/6-rancho-vegetariano.jpg
 price: '1.00'
 ---
 
